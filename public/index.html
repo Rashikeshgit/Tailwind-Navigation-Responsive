@@ -36,10 +36,14 @@
     <script>
         const toggleBtn = document.querySelector(".toggle-button");
         const dropDown = document.querySelector(".dropdown-menu");
-
-        toggleBtn.addEventListener("click",()=>{
+        toggleBtn.addEventListener("click", (e) => {
             console.log("Toggle button clicked!");
-            dropDown.classList.toggle('top-16');
+            if (dropDown.classList.contains("-top-full")) {
+                dropDown.classList.replace("-top-full", "top-16");
+            }
+            else {
+                dropDown.classList.replace("top-16", "-top-full");
+            }
         })
     </script>
    
